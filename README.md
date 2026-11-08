@@ -92,27 +92,3 @@ render.yaml        # deployment blueprint
 pytest -q
 ```
 
-## Deploy
-
-1. Push the folder to a **public GitHub repository** (exclude `.env`, the `.db` file, and API keys).
-2. Create a PostgreSQL database on Neon, Supabase, Render, or another provider.
-3. Deploy this repository as a Docker web service using `Dockerfile`. Set `DATABASE_URL` to the persistent PostgreSQL connection string.
-4. Leave `EXTRACTION_PROVIDER=demo` for a dependable no-key demonstration or configure Gemini separately.
-5. Configure `API_KEY` for any publicly exposed instance. Access authenticated requests using `X-API-Key`. The included dashboard has a field to supply this key per browser session. Do **not** put credentials in repository code.
-6. Open `/docs` and `/` at the generated deployment URL, test both, then put the exact links in the submission.
-
-**Deployment limits:** This is a small demonstration, not production CRM infrastructure. The API key is a simple shared secret; use a proper identity provider, HTTPS, user isolation, request throttling, audit logging, database migrations, and structured monitoring for production. Use a persistent hosted database; local SQLite files on ephemeral hosts may be lost after restarts.
-
-## Phase 02 walkthrough (3–5 minutes)
-
-1. **0:00–0:35:** Introduce the business problem and LeadPilot AI.
-2. **0:35–1:10:** Show `/docs`, explain API-first architecture and database models.
-3. **1:10–2:00:** Analyze an example inquiry; explain parsed fields, score, reasons and follow-up task.
-4. **2:00–2:45:** Submit an incomplete inquiry; show human-review flag and why no follow-up is created.
-5. **2:45–3:30:** Replay webhook with same `event_id` and demonstrate deduplication.
-6. **3:30–4:20:** Show persisted records, update status, and demonstrate a validation error.
-7. **4:20–4:45:** Explain challenges, trade-offs, and optional genuine Gemini mode.
-
-**Submit:** GitHub repository URL + deployed `/docs` URL (if available) + recorded walkthrough video. Ensure sharing permissions work in a private browser window.
-
-**Important:** The internship invitation says Phase 02 should be based on the Phase 01 idea. Verify that this project is compatible with the original idea or obtain approval for changing it before submitting.
