@@ -1,0 +1,24 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.db
+*.sqlite3
+.coverage
+.DS_Store
+# Environment files
+.env.*
+!.env.example
+
+# Python
+*.pyd
+.pytest_cache/
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# Windows
+Thumbs.db
