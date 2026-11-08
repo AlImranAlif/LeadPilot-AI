@@ -27,7 +27,7 @@ cp .env.example .env  # On Windows, use: copy .env.example .env
 uvicorn app.main:app --reload
 ```
 
-Visit [http://127.0.0.1:8000/ ](https://leadpilot-ai-9wls.onrender.com/)for the dashboard or [https://leadpilot-ai-9wls.onrender.com/docs](https://leadpilot-ai-9wls.onrender.com/docs) for Swagger.
+Visit  https://leadpilot-ai-9wls.onrender.comfor the dashboard or [https://leadpilot-ai-9wls.onrender.com/docs](https://leadpilot-ai-9wls.onrender.com/docs) for Swagger.
 
 The SQLite database `leadpilot.db` is created automatically on first launch. Use PostgreSQL in deployment by setting `DATABASE_URL=postgresql+psycopg://user:password@host:5432/database` (URL-encode special characters in credentials).
 
